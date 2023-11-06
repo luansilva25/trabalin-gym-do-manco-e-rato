@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 500px;
+            margin-left: 50px;
+        }
+
+        .cabecalho {
+            box-shadow: 1px 2px 2px 1px black;
+        }
+
+        #menu-resp {
+            font-size: 17px;
+            font-weight: 600;
+            margin-right: 50px;
+            display: flex;
+        }
+
+        #search-box {
+            width: 500px;
+            font-size: 12px;
+            height: 35px;
+            outline: 0;
+            border-radius: 30px;
+            border: 1px solid black;
+        }
+
+        #search-box:focus,
+        #search-box:hover {
+            border: 1px solid blue;
+        }
+
+        #search-box::placeholder {
+            margin-left: 10px;
+        }
+      
+        #login {
+            width: 100px;
+        }
+        #menu-hamburguer{
+            display: none;
+        }
+        .menu-resp{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-right: 50px;
+        }
+        .nav-link:hover {
+            color: blue;
+        }
+
+
+        @media(max-width:1060px) {
+            .menu-resp{
+                display: none;
+            }
+
+            #menu-hamburguer{
+                display: flex;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho w-100 bg-light-subtle d-flex justify-content-between align-items-center p-3">
+        <img src="img/th.jpg" id="logo">
+        <input type="search" placeholder="encontre sua academia aqui..." id="search-box">
+        <nav class="navbar gap-lg-4" id="menu">
+            <div class="menu-resp">
+            <li class="list-unstyled nav-link ">home</li>
+            <li class="list-unstyled nav-link">about</li>
+            <li class="list-unstyled nav-link">contact</li>
+            <button class="bg-primary text-warning border-0 p-2" id="login">log in</button>
+            <a class="text-decoration-none text-primary nav-link">sign up</a>
+        </div>
+        <button class="navbar-toggler" type="button"  data-toggler="collapse" id="menu-hamburguer" onclick="">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </nav>
+
+    </header>
+</body>
+
+</html>
