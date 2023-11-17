@@ -76,16 +76,13 @@
     transition: .5s;
 }
 .menu-hamburguer{
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 5px;
     display: none;
     margin-right: 50px;
-
+    position: relative;
 }
-.menu-hamburguer div{
-    border: 2px solid black;
+#menu-resp{
+    height: 50px;
     width: 50px;
 }
 .container{
@@ -98,6 +95,10 @@
     width: 1240px;
     height: 100vh;
     border: 1px solid;
+    padding: 20px;
+}
+.container-main h1{
+    text-align: center;
 }
 .rodape{
     background-color: gray;
@@ -107,12 +108,37 @@
     padding: 50px;
     border-top: 2px solid blue;
 }
-
+.open{
+    list-style: none;
+    z-index: 1;
+}
+.open li a{
+    color: inherit;
+    text-decoration: none;
+}
+.pagamentos{
+    display: flex;
+    border: 1px solid;
+    height: 400px;
+    padding: 20px;
+    justify-content: space-around;
+   
+}
+.tipo-pagamento{
+    width: 300px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
 @media(max-width:1200px){
     .navbar{
         display: none;
     }
     .menu-hamburguer{
         display: flex;
+    }
+    .menu-hamburguer:hover{
+        background-color: rgba(151, 148, 148, 0.397);
+        border-radius: 20px;
     }
 }
