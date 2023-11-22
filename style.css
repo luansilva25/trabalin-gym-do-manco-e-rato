@@ -1,19 +1,34 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --pretoforte: black; 
+    --amarelao: #FFDE17;
+    --amarelinho: #FFF6BF;
+    --pretofosco: #393835;
+    --cinza: #D2D2D2; 
+    --font: 'Poppins', sans-serif;
+}
+
+
 .cabecalho{
+    font-family: var(--font);
     display: flex;
-    background-color: gray;
+    background-color: var(--pretoforte);
     justify-content: space-between;
-    box-shadow: 1px 2px 2px 1px black;
+    box-shadow: 1px 2px 2px 1px var(--amarelao);
     font-size: 18px;
     align-items: center;
 }
 #logo{
-    width: 100px;
-    height: 100px;
+    width: 10vw;
+    height: 8vh;
     margin-left: 100px;
 }
 .navbar{
@@ -28,10 +43,10 @@
 }
 .navbar li a {
     text-decoration: none;
-    color: inherit;
+    color: white;
 }
 .navbar li a:hover{
-    color: white;
+    color: var(--amarelao);
     transition: .5s;
 }
 #search-bar{
@@ -40,11 +55,12 @@
     font-size: 15px;
     border-radius: 20px;
     border: 1px solid;
-    outline: 0;
+    outline: 0; 
+    padding-left: 10px;
 }
 #search-bar:focus,
 #search-bar:hover{
-    border: 1px solid rgb(0, 89, 255)
+    border: 1px solid yellow
 }
 .registro{
     display: flex;
@@ -57,8 +73,8 @@
     height: 40px;
     border: none;
     font-size: 18px;
-    background-color: blue;
-    color: white;
+    background-color: rgb(255, 230, 0);
+    color: var(--pretoforte);
     border-radius: 50px ;
 }
 .registro button a{
@@ -67,12 +83,12 @@
 }
 .registro p a{
     text-decoration: none;
-    color: blue;
+    color: yellow;
 }
 .registro button:hover{
     background-color: white;
     color: black;
-    border: 1px solid blue;
+    border: 1px solid yellow;
     transition: .5s;
 }
 .menu-hamburguer{
@@ -88,6 +104,7 @@
 .container{
     display: flex;
     align-items:center ;
+    flex-direction: column;
     justify-content: center;
     padding: 50px;
 }
