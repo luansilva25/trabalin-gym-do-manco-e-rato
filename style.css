@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 /* colors */
 :root{
@@ -15,7 +16,9 @@
     --cinza: #D2D2D2; 
     --font: 'Poppins', sans-serif;
 }
-
+body{
+    overflow-x: hidden;
+}
 /* header */
 .cabecalho{
     font-family: var(--font);
@@ -131,6 +134,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+   
    animation: carrossel 20s infinite;
    margin-left: 400vw ;
 }
