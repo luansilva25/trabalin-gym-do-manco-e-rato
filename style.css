@@ -1,4 +1,4 @@
-
+/*<-- font principal -->*/
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 *{
@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* colors */
 :root{
     --pretoforte: black; 
     --amarelao: #FFDE17;
@@ -16,15 +16,17 @@
     --font: 'Poppins', sans-serif;
 }
 
-
+/* header */
 .cabecalho{
     font-family: var(--font);
+    width: 100vw;
     display: flex;
     background-color: var(--pretoforte);
     justify-content: space-between;
     box-shadow: 1px 2px 2px 1px var(--amarelao);
     font-size: 18px;
     align-items: center;
+    padding: 10px;
 }
 #logo{
     width: 10vw;
@@ -101,52 +103,225 @@
     height: 50px;
     width: 50px;
 }
+
+/* <-- end header --> */
+
 .container{
     display: flex;
-    align-items:center ;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 50px;
+    width: 100vw;
+    margin-top: 4px;
 }
-.container-main{
-    width: 1240px;
-    height: 100vh;
+.localizacao{
+    font-family: var(--font);
+    background-color: var(--amarelao);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+/* carrossel */
+.carrossel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+   animation: carrossel 20s infinite;
+   margin-left: 400vw ;
+}
+.item-carrossel{
+    width: 100vw;
+    height:500px;
+    background-image: linear-gradient(270deg, transparent, var(--pretofosco));
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+/* <-- carrossel animation --> */
+@keyframes carrossel {
+    0%{margin-left: 400vw;}
+    15%{margin-left: 400vw;}
+    20%{margin-left: 200vw;}
+    25%{margin-left: 200vw;}
+    30%{margin-left: 0;}
+    45%{margin-left: 0;}
+    50%{margin-left: -200vw;}
+    65%{margin-left: -200vw;}
+    70%{margin-left: -400vw;}
+    85%{margin-left: -400vw;}
+    100%{margin-left: 400vw;}
+}
+.item-carrossel p{
+    font-size: 50px;
+    font-family: var(--font);
+    background-color: grey;
+    padding: 20px;
+    color: white;
+    border-bottom: 2px solid var(--amarelinho);
+}
+.item-carrossel img{
+    width: 100vw;
+    height:500px;
+    position: absolute;
+    z-index: -1;
+}
+/* end carrossel */
+
+/* conteudo principal */
+.container-pagamentos{
+    font-family: var(--font);
+    width: 100vw;
+    height: 700px;
     border: 1px solid;
     padding: 20px;
+    background-color: black;
+  
+
 }
-.container-main h1{
+.container-pagamentos h1{
     text-align: center;
+    color: var(--amarelao);
 }
+
+.pagamentos img{
+    height: 500px;
+    width: 600px;
+    border-radius: 150px ;
+}
+
+.pagamentos{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    border: 1px solid;
+    height: 500px;
+    width: 100vw;
+    padding: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+.matricula{
+    display: flex;
+    gap: 5px;
+}
+.recorrente{
+    width: 300px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--amarelao);
+    padding: 10px;
+    gap: 20px;
+    height: 500px;
+
+}
+.recorrente h1{
+    color: black;
+}
+.recorrente ul{
+    list-style: none;
+}
+.recorrente ul li::before{
+    content: "✓";
+}
+
+.recorrente button{
+    display: none;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 300px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.recorrente:hover{
+    background-color: var(--cinza);
+    transition: 1s;
+}
+.recorrente:hover button{
+    display: flex;
+
+    
+}
+.recorrente button:hover{
+    background-color: black;
+    color: var(--amarelao);
+}
+.botao-recorrente{
+    display: flex;
+    height: 200px;
+    align-items: end;
+    justify-content: center;
+}
+
+.anual{
+    height: 500px;
+    width: 300px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    border: var(--amarelao);
+    background-color: black;
+    padding: 10px;
+    gap: 20px;
+    color: var(--amarelao);
+    border: 2px solid var(--amarelao)
+}
+.anual button{
+    display: none;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 300px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.anual:hover{
+    color: black;
+    background-color: var(--cinza);
+    transition: 1s;
+}
+.anual:hover h1{
+    color: black;
+}
+.anual:hover button{
+    display: flex;
+
+}
+.botao-anual{
+
+    display: flex;
+    height: 175px;
+    align-items: end;
+    justify-content: center;
+}
+.anual button:hover{
+    background-color: var(--amarelao);
+    color: black;
+}
+.anual ul{
+    list-style: none;
+}
+.anual ul li::before{
+    content: "✓";
+}
+/* footer */
 .rodape{
     background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
-    border-top: 2px solid blue;
+    border-top: 2px solid var(--amarelinho);
 }
-.open{
-    list-style: none;
-    z-index: 1;
-}
-.open li a{
-    color: inherit;
-    text-decoration: none;
-}
-.pagamentos{
-    display: flex;
-    border: 1px solid;
-    height: 400px;
-    padding: 20px;
-    justify-content: space-around;
-   
-}
-.tipo-pagamento{
-    width: 300px;
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
-}
+
+/*reponsividade*/
+
 @media(max-width:1200px){
     .navbar{
         display: none;
