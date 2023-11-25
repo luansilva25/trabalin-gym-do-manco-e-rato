@@ -149,15 +149,15 @@ body{
 /* <-- carrossel animation --> */
 @keyframes carrossel {
     0%{margin-left: 400vw;}
-    15%{margin-left: 400vw;}
+    9%{margin-left: 400vw;}
     20%{margin-left: 200vw;}
-    25%{margin-left: 200vw;}
-    30%{margin-left: 0;}
-    45%{margin-left: 0;}
-    50%{margin-left: -200vw;}
-    65%{margin-left: -200vw;}
-    70%{margin-left: -400vw;}
-    85%{margin-left: -400vw;}
+    29%{margin-left: 200vw;}
+    40%{margin-left: 0;}
+    49%{margin-left: 0;}
+    60%{margin-left: -200vw;}
+    69%{margin-left: -200vw;}
+    80%{margin-left: -400vw;}
+    89%{margin-left: -400vw;}
     100%{margin-left: 400vw;}
 }
 .item-carrossel p{
