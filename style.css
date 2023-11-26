@@ -1,26 +1,29 @@
 /*<-- font principal -->*/
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
+
 }
+
 /* colors */
-:root{
-    --pretoforte: black; 
+:root {
+    --pretoforte: black;
     --amarelao: #FFDE17;
     --amarelinho: #FFF6BF;
     --pretofosco: #393835;
-    --cinza: #D2D2D2; 
+    --cinza: #D2D2D2;
     --font: 'Poppins', sans-serif;
 }
-body{
+
+body {
     overflow-x: hidden;
 }
+
 /* header */
-.cabecalho{
+.cabecalho {
     font-family: var(--font);
     width: 100vw;
     display: flex;
@@ -31,85 +34,98 @@ body{
     align-items: center;
     padding: 10px;
 }
-#logo{
+
+#logo {
     width: 10vw;
     height: 8vh;
     margin-left: 100px;
 }
-.navbar{
+
+.navbar {
     display: flex;
     align-items: center;
     gap: 20px;
     margin-right: 100px;
 }
 
-.navbar li{
+.navbar li {
     list-style: none;
 }
+
 .navbar li a {
     text-decoration: none;
     color: white;
 }
-.navbar li a:hover{
+
+.navbar li a:hover {
     color: var(--amarelao);
     transition: .5s;
 }
-#search-bar{
+
+#search-bar {
     height: 40px;
     width: 300px;
     font-size: 15px;
     border-radius: 20px;
     border: 1px solid;
-    outline: 0; 
+    outline: 0;
     padding-left: 10px;
 }
+
 #search-bar:focus,
-#search-bar:hover{
+#search-bar:hover {
     border: 1px solid yellow
 }
-.registro{
+
+.registro {
     display: flex;
     gap: 10px;
     align-items: center;
-    
+
 }
-.registro button{
+
+.registro button {
     width: 100px;
     height: 40px;
     border: none;
     font-size: 18px;
     background-color: rgb(255, 230, 0);
     color: var(--pretoforte);
-    border-radius: 50px ;
+    border-radius: 50px;
 }
-.registro button a{
+
+.registro button a {
     text-decoration: none;
     color: inherit;
 }
-.registro p a{
+
+.registro p a {
     text-decoration: none;
     color: yellow;
 }
-.registro button:hover{
+
+.registro button:hover {
     background-color: white;
     color: black;
     border: 1px solid yellow;
     transition: .5s;
 }
-.menu-hamburguer{
+
+.menu-hamburguer {
     align-items: center;
     display: none;
     margin-right: 50px;
     position: relative;
 }
-#menu-resp{
+
+#menu-resp {
     height: 50px;
     width: 50px;
 }
 
 /* <-- end header --> */
 
-.container{
+.container {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -117,7 +133,8 @@ body{
     width: 100vw;
     margin-top: 4px;
 }
-.localizacao{
+
+.localizacao {
     font-family: var(--font);
     background-color: var(--amarelao);
     width: 100vw;
@@ -128,39 +145,75 @@ body{
     padding: 10px;
     gap: 10px;
 }
+
 /* carrossel */
-.carrossel{
+.carrossel {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-   
-   animation: carrossel 20s infinite;
-   margin-left: 400vw ;
+
+    animation: carrossel 20s infinite;
+    margin-left: 400vw;
 }
-.item-carrossel{
+
+.item-carrossel {
     width: 100vw;
-    height:500px;
+    height: 500px;
     background-image: linear-gradient(270deg, transparent, var(--pretofosco));
     display: flex;
     justify-content: start;
     align-items: center;
 }
+
 /* <-- carrossel animation --> */
 @keyframes carrossel {
-    0%{margin-left: 400vw;}
-    9%{margin-left: 400vw;}
-    20%{margin-left: 200vw;}
-    29%{margin-left: 200vw;}
-    40%{margin-left: 0;}
-    49%{margin-left: 0;}
-    60%{margin-left: -200vw;}
-    69%{margin-left: -200vw;}
-    80%{margin-left: -400vw;}
-    89%{margin-left: -400vw;}
-    100%{margin-left: 400vw;}
+    0% {
+        margin-left: 400vw;
+    }
+
+    9% {
+        margin-left: 400vw;
+    }
+
+    20% {
+        margin-left: 200vw;
+    }
+
+    29% {
+        margin-left: 200vw;
+    }
+
+    40% {
+        margin-left: 0;
+    }
+
+    49% {
+        margin-left: 0;
+    }
+
+    60% {
+        margin-left: -200vw;
+    }
+
+    69% {
+        margin-left: -200vw;
+    }
+
+    80% {
+        margin-left: -400vw;
+    }
+
+    89% {
+        margin-left: -400vw;
+    }
+
+    100% {
+        margin-left: 400vw;
+    }
 }
-.item-carrossel p{
+
+.item-carrossel p {
     font-size: 50px;
     font-family: var(--font);
     background-color: grey;
@@ -168,37 +221,40 @@ body{
     color: white;
     border-bottom: 2px solid var(--amarelinho);
 }
-.item-carrossel img{
+
+.item-carrossel img {
     width: 100vw;
-    height:500px;
+    height: 500px;
     position: absolute;
     z-index: -1;
 }
+
 /* end carrossel */
 
 /* conteudo principal */
-.container-pagamentos{
+.container-pagamentos {
     font-family: var(--font);
     width: 100vw;
     height: 700px;
     border: 1px solid;
     padding: 20px;
     background-color: black;
-  
+
 
 }
-.container-pagamentos h1{
+
+.container-pagamentos h1 {
     text-align: center;
     color: var(--amarelao);
 }
 
-.pagamentos img{
+.pagamentos img {
     height: 500px;
     width: 600px;
-    border-radius: 150px ;
+    border-radius: 150px;
 }
 
-.pagamentos{
+.pagamentos {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -209,11 +265,13 @@ body{
     align-items: center;
     margin-top: 20px;
 }
-.matricula{
+
+.matricula {
     display: flex;
     gap: 5px;
 }
-.recorrente{
+
+.recorrente {
     width: 300px;
     border: 1px solid;
     display: flex;
@@ -224,17 +282,20 @@ body{
     height: 500px;
 
 }
-.recorrente h1{
+
+.recorrente h1 {
     color: black;
 }
-.recorrente ul{
+
+.recorrente ul {
     list-style: none;
 }
-.recorrente ul li::before{
+
+.recorrente ul li::before {
     content: "✓";
 }
 
-.recorrente button{
+.recorrente button {
     display: none;
     border-radius: 10px;
     font-size: 18px;
@@ -243,27 +304,31 @@ body{
     align-items: center;
     justify-content: center;
 }
-.recorrente:hover{
+
+.recorrente:hover {
     background-color: var(--cinza);
     transition: 1s;
 }
-.recorrente:hover button{
+
+.recorrente:hover button {
     display: flex;
 
-    
+
 }
-.recorrente button:hover{
+
+.recorrente button:hover {
     background-color: black;
     color: var(--amarelao);
 }
-.botao-recorrente{
+
+.botao-recorrente {
     display: flex;
     height: 200px;
     align-items: end;
     justify-content: center;
 }
 
-.anual{
+.anual {
     height: 500px;
     width: 300px;
     border: 1px solid;
@@ -276,7 +341,8 @@ body{
     color: var(--amarelao);
     border: 2px solid var(--amarelao)
 }
-.anual button{
+
+.anual button {
     display: none;
     border-radius: 10px;
     font-size: 18px;
@@ -285,37 +351,498 @@ body{
     align-items: center;
     justify-content: center;
 }
-.anual:hover{
+
+.anual:hover {
     color: black;
     background-color: var(--cinza);
     transition: 1s;
 }
-.anual:hover h1{
+
+.anual:hover h1 {
     color: black;
 }
-.anual:hover button{
+
+.anual:hover button {
     display: flex;
 
 }
-.botao-anual{
 
+.botao-anual {
     display: flex;
     height: 175px;
     align-items: end;
     justify-content: center;
 }
-.anual button:hover{
+
+.botao-anual button {
+    border: 2px solid black;
+}
+
+.botao-recorrente button {
+    border: 2px solid black;
+}
+
+.anual button:hover {
     background-color: var(--amarelao);
     color: black;
 }
-.anual ul{
+
+.anual ul {
     list-style: none;
 }
-.anual ul li::before{
+
+.anual ul li::before {
     content: "✓";
 }
+
+/* Sessão treinos ------------------------------------------------------------*/
+
+#treinos-section {
+    background-image: url('img/casal-treinando-juntos-na-academia.jpg');
+    height: 100vh;
+    width: 100%;
+    background-position: top center;
+    background-size: 100%;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: black;
+    opacity: 90%;
+}
+
+#h2Treinos {
+    top: 8%;
+    left: 8%;
+    font-size: 15vh;
+    position: absolute;
+    color: white;
+    font-family: var(--font);
+}
+
+#p1-container {
+    width: 30vw;
+    height: 15vh;
+    position: relative;
+    top: 40%;
+    left: 6%;
+}
+
+#treinosP1 {
+    top: 8%;
+    left: 8%;
+    font-size: 3vh;
+    position: absolute;
+    font-family: var(--font);
+    color: var(--amarelao);
+}
+
+#p2-container {
+    width: 18vw;
+    height: 9vh;
+    position: relative;
+    top: 65%;
+    left: 8%;
+    display: flex;
+    align-items: end;
+    position: absolute;
+}
+
+#treinosP2 {
+    top: 8%;
+    left: 8%;
+    font-size: 3vh;
+    font-family: var(--font);
+    color: var(--amarelao);
+}
+
+#external {
+    position: relative;
+    width: 4vh;
+    height: 6vh;
+    color: white;
+    font-size: 5vh;
+}
+
+#externalA:hover #external {
+    color: var(--amarelao);
+    transition: .5s;
+}
+
+#beneficios-treino {
+    height: 65vh;
+    width: 35%;
+    background-color: var(--amarelao);
+    position: relative;
+    left: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+#beneficios-treino ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+#beneficios-treino ul li {
+    display: flex;
+}
+
+#beneficios-treino p {
+    font-size: 3.5vh;
+    font-weight: 800;
+    padding-left: 1%;
+    font-family: var(--font);
+
+}
+
+#beneficios-treino i {
+    font-size: 4vh;
+}
+
+/* Sessão treinos  FIM ------------------------------------------------------------*/
+
+
+/* Sessão APP ----------------------------------------------------------------------*/
+
+#App-section {
+    width: 100%;
+    height: 55vh;
+    background-color: var(--pretoforte);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#App-section h2 {
+    position: relative;
+    top: 8%;
+    left: 4%;
+    font-size: 7vh;
+    color: white;
+    font-family: var(--font);
+}
+
+#desc-app {
+    width: 21vw;
+    height: 50%;
+    position: relative;
+    top: 15%;
+    left: 4%;
+}
+
+#desc-app h3 {
+    color: var(--amarelao);
+    font-size: 6vh;
+    font-family: var(--font);
+}
+
+#desc-app p {
+    color: var(--cinza);
+    font-size: 2.5vh;
+    font-family: var(--font);
+}
+
+#botoes-download {
+    width: 40vw;
+    height: 50%;
+    position: relative;
+    top: 35%;
+    left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#play-btn {
+    width: 75%;
+    height: 45%;
+    border-radius: 10px;
+}
+
+#play-btn button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s ease-in-out;
+    user-select: none;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: var(--pretoforte);
+}
+
+#play-btn button:hover {
+    background-color: var(--cinza);
+}
+
+#play-btn button:hover p {
+    color: var(--pretoforte);
+}
+
+#play-btn button:hover i {
+    color: var(--pretoforte);
+}
+
+#play-btn p {
+    color: white;
+    font-size: 5.5vh;
+    font-family: var(--font);
+    padding-left: 2%;
+    font-weight: 700;
+}
+
+#play-btn i {
+    color: white;
+    font-size: 9vh;
+    font-family: var(--font);
+    padding-right: 10%;
+}
+
+#apple-btn {
+    width: 75%;
+    height: 45%;
+    background-color: var(--amarelao);
+    border-radius: 10px;
+}
+
+#apple-btn p {
+    color: var(--pretoforte);
+    font-size: 5.5vh;
+    font-family: var(--font);
+    padding-left: 2%;
+    font-weight: 700;
+}
+
+#apple-btn button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s ease-in-out;
+    user-select: none;
+    border-radius: 10px;
+    border: 2px solid;
+    background-color: var(--amarelao);
+}
+
+#apple-btn button:hover {
+    background-color: white;
+}
+
+#apple-btn button:hover p {
+    color: var(--pretoforte);
+}
+
+#apple-btn button:hover i {
+    color: var(--pretoforte);
+}
+
+#apple-btn i {
+    color: var(--pretoforte);
+    font-size: 9vh;
+    font-family: var(--font);
+    padding-right: 10%;
+}
+
+/* Sessão APP FIM ----------------------------------------------------------------------*/
+
+/* Sessão spotify --------------------------------------------------------------------*/
+
+#musica-section {
+    width: 100%;
+    height: 65vh;
+    background-color: var(--amarelao);
+    display: flex;
+    flex-direction: column;
+}
+
+#musica-section h2 {
+    text-align: center;
+    position: relative;
+    top: 7%;
+    font-size: 6vh;
+    font-family: var(--font);
+}
+
+#box-spotify {
+    width: 30vw;
+    height: 20vh;
+    position: relative;
+    top: 30%;
+    left: 6%;
+    display: flex;
+}
+
+#box-spotify h3 {
+    font-size: 5vh;
+    font-family: var(--font);
+}
+
+#box-spotify i {
+    font-size: 13vh;
+    font-family: var(--font);
+}
+
+#capa {
+    width: 25%;
+    height: 80%;
+    position: relative;
+    bottom: 10%;
+    left: 67%;
+}
+
+#capa img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+}
+
+#overlay2 {
+    width: 100%;
+    height: 100%;
+    background-color: var(--pretoforte);
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+
+#capa a:hover #overlay2 {
+    width: 100%;
+    height: 100%;
+    background-color: var(--pretoforte);
+    opacity: 50%;
+    position: absolute;
+}
+
+/* Sessão spotify FIM --------------------------------------------------------------------*/
+/* Sobre a academia ----------------------------------------------------------------------*/
+
+#academiaAbout-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/academiauplay.png');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#overlay3 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: black;
+    opacity: 95%;
+}
+
+#overlay3 h3 {
+    color: white;
+    text-align: center;
+    font-size: 7vh;
+    position: relative;
+    top: 5%;
+    font-family: var(--font);
+}
+
+#container-infos {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    top: 7%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxes-gym {
+    width: 30%;
+    height: 100%;
+    background-color: var(--pretoforte);
+    border: 2px solid var(--amarelao);
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.boxes-gym:hover .box-gym {
+  background-color: var(--pretoforte);
+}
+
+.boxes-gym:hover  {
+    background-color: var(--amarelao)
+}
+
+.boxes-gym:hover .info-box p  {
+    color: white;
+}
+
+.boxes-gym:hover .info-box i  {
+    color: white;
+}
+
+.box-gym {
+    width: 100%;
+    background-color: #FFDE17;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+.g1 {
+    height: 90%;
+}
+
+.g2 {
+    height: 80%;
+}
+
+.g3 {
+    height: 70%;
+}
+
+.info-box {
+    width: 80%;
+    height: 25vh;
+    border: 3px solid white;
+    border-radius: 10px;
+    position: relative;
+    top: 3%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-box p {
+    color: var(--pretoforte);
+    position: relative;
+    top: 5%;
+    font-size: 2.5vh;
+    font-weight: 700;
+    font-family: var(--font);
+    text-emphasis: center;
+}
+
+.info-box i{
+    font-size: 12vh;
+}
+
+/* Sobre a academia FIM ----------------------------------------------------------------------*/
+
 /* footer */
-.rodape{
+.rodape {
     background-color: gray;
     display: flex;
     justify-content: center;
@@ -326,14 +853,16 @@ body{
 
 /*reponsividade*/
 
-@media(max-width:1200px){
-    .navbar{
+@media(max-width:1200px) {
+    .navbar {
         display: none;
     }
-    .menu-hamburguer{
+
+    .menu-hamburguer {
         display: flex;
     }
-    .menu-hamburguer:hover{
+
+    .menu-hamburguer:hover {
         background-color: rgba(151, 148, 148, 0.397);
         border-radius: 20px;
     }
