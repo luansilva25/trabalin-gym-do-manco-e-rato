@@ -537,7 +537,7 @@ body {
 /* Sessão APP ----------------------------------------------------------------------*/
 
 #App-section {
-    width: 100%;
+    width: 100vw;
     height: 55vh;
     background-color: var(--pretoforte);
     display: flex;
@@ -560,6 +560,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding-top: 5vh;
+    border: 2px solid white;
 }
 
 #desc-app {
@@ -572,6 +573,7 @@ body {
     align-items: left;
     justify-content: center;
     gap: 1vh;
+    border: 1px solid white;
 }
 
 #desc-app h3 {
@@ -596,7 +598,7 @@ body {
     width: 45vw;
     height: 80%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -899,7 +901,11 @@ body {
 }
 
 /*reponsividade*/
-
+@media(max-width: 2060px){
+    #botoes-download{
+       left: 300px;
+    }
+}
 @media(max-width: 1350px) {
     .pagamentos {
         justify-content: center;
@@ -909,18 +915,8 @@ body {
         display: none
     }
 
-    #botoes-download {
-        left: 0;
-    }
 }
 
-@media(max-width: 1315px) {
-
-    #play-btn p,
-    #apple-btn p {
-        font-size: 3.5vh;
-    }
-}
 
 @media(max-width:1200px) {
     .navbar {
@@ -944,16 +940,4 @@ body {
     }
 }
 
-@media(max-width:1110px) {
-    #botoes-download {
-        flex-wrap: nowrap;
-        flex-direction: column;
-        gap: 10px;
-    }
-}
 
-@media(max-width:912px) {
-    #botoes-download {
-        margin-right: 50px;
-    }
-}
