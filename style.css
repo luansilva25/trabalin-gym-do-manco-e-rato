@@ -117,25 +117,30 @@ body {
     padding: 30px;
     height: 80px;
 }
+
 .menu-resp span {
     border: 1px solid var(--amarelao);
     width: 30px;
 }
-.menu-hamburguer{ 
+
+.menu-hamburguer {
     display: none;
     background-color: var(--amarelao);
     list-style: none;
-   
+
 }
-.menu-hamburguer li{
+
+.menu-hamburguer li {
     border-bottom: 1px solid white;
     text-align: center;
     padding: 10px;
 }
-.menu-hamburguer li a{
+
+.menu-hamburguer li a {
     text-decoration: none;
     color: white;
 }
+
 .menu-resp:hover .menu-hamburguer {
     padding: 30px;
     position: absolute;
@@ -560,7 +565,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding-top: 5vh;
-    border: 2px solid white;
+
 }
 
 #desc-app {
@@ -573,7 +578,6 @@ body {
     align-items: left;
     justify-content: center;
     gap: 1vh;
-    border: 1px solid white;
 }
 
 #desc-app h3 {
@@ -594,6 +598,7 @@ body {
     display: flex;
     align-items: center;
 }
+
 #botoes-download {
     width: 45vw;
     height: 80%;
@@ -601,6 +606,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 #play-btn {
@@ -901,11 +907,23 @@ body {
 }
 
 /*reponsividade*/
-@media(max-width: 2060px){
-    #botoes-download{
-       left: 300px;
+@media(max-width: 2060px) {
+    #botoes-flex {
+        margin-right: 100px;
+
     }
 }
+
+@media(max-width: 1500px) {
+    #flex-app {
+        margin-left: 200px;
+    }
+    #botoes-flex{
+        margin-right: 300px;
+    }
+    
+}
+
 @media(max-width: 1350px) {
     .pagamentos {
         justify-content: center;
@@ -916,28 +934,266 @@ body {
     }
 
 }
-
-
 @media(max-width:1200px) {
     .navbar {
         display: none;
     }
-    .menu-resp{
+
+    .menu-resp {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        margin: 0;
     }
+
     .menu-resp:hover {
         background-color: #FFDE17;
-        
+
     }
-    .menu-resp:hover span{
+
+    .menu-resp:hover span {
         border: 1px solid black;
     }
+
     .menu-resp:hover .menu-hamburguer {
         display: flex;
         flex-direction: column;
+        right: 0;
+    }
+    
+    #logo {
+        width: 200px;
+    }
+}
+@media(max-width:1000px){
+    #flex-app {
+        margin-left: 0;
+    }
+    #botoes-flex{
+        margin-right: 0;
+    }
+    #treinos-section{
+        height: 150vh;
+    }
+    #container-treinosFlex{
+        flex-direction: column;
+    }
+    #desc-treino{
+    width: 400px;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    }
+    #p1-container,#p2-container{
+        width: 300px;
+    }
+    #beneficios-treino{
+        width: 350px;
+    }
+}
+@media(max-width:950px){
+    #flex-app {
+        margin-left: 100px;
+    }
+    #botoes-flex{
+        margin-right: 100px;
+    }
+   
+
+}
+@media(max-width:850px){
+    #academiaAbout-section{
+        height: 300vh;
+    }
+    #container-infos{
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    .boxes-gym{
+        width: 250px;
+    }
+}
+@media(max-width: 800px){
+    #App-section{
+        height: 120vh;
+
+    }
+    #desc-app{
+        width: 1000px;
+        margin-left: 0;
+    }
+    #flex-app{
+        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        margin-top: 100px;
+        margin-right: 200px;
+ 
+    }
+    #botoes-download{
+
+        width: 200vw;
+        margin-left: 0;
+    }
+    #play-btn,
+    #apple-btn{
+        margin-right:200px;
+    }
+}
+@media(max-width:750px) {
+    .menu-resp:hover .menu-hamburguer {
+        width: 100vw;
+      
+    }
+
+    #search-bar {
+        align-self: center;
+        width: 600px;
+    }
+
+    .item-carrossel p {
+        font-size: 30px;
+    }
+
+    .item-carrossel {
+        height: 300px;
+    }
+
+    .item-carrossel img {
+        height: 300px
+    }
+
+    .container-pagamentos {
+        height: 250vh;
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-pagamentos h1{
+        font-size: 20px;
+    }
+
+    .pagamentos {
+        width: 100vw;
+        height: auto;
+        margin-top: 200px;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .matricula {
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+@media(max-width:700px){
+    #desc-app{
+        width: 500px;
+    }
+    #play-btn,
+    #apple-btn{
+        width: 500px;
+    }
+    #flex-app{
+        margin: 50px;
+    }
+    #App-section h2{
+        font-size: 5vh;
+     }
+     #musica-section{
+        gap: 20px;
+        height: 100vh;
+     }
+     #musica-section h2{
+        text-align: center;
+     }
+     #flex-musica{
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        margin-top: 50px
+     }
+     #capa img{
+        width: 300px;
+        height: 300px;
+    }
+    #capa{
+        margin-right: 150px;
+    }
+}
+@media(max-width:640px) {
+    #search-bar {
+        width: 450px;
     }
 }
 
+@media(max-width: 600px){
+    #play-btn,
+    #apple-btn{
+        width: 350px;
+    }
+    #desc-app{
+        width: 350px;
+    }
+    #box-spotify{
+        flex-direction: column;
+        align-items: center;
+    }
+    #flex-musica{
+        gap: 150px;
+    }
+    
+}
+@media(max-width: 500px) {
+    #search-bar {
+        width: 300px
+    }
 
+    .item-carrossel p {
+        font-size: 20px;
+    }
+    #h2Treinos{
+        font-size: 10vh;
+    }
+    #musica-section h2{
+        font-size: 5vh;
+     }
+
+     #capa img{
+        width: 200px;
+        height: 200px;
+    }
+    #capa{
+        margin-right: 100px;
+    }
+    #play-btn, #apple-btn{
+        width: 300px;
+    }
+    #beneficios-treino{
+        width: 300px;
+
+    } 
+    .matricula{
+        margin-right: 50px;
+    }
+}
+@media(max-width:450px){
+    #App-section h2{
+        width: 300px;
+     }
+    #flex-app{
+    margin: 20px;
+    
+ }
+}
