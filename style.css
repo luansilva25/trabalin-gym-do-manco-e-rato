@@ -111,17 +111,39 @@ body {
     transition: .5s;
 }
 
-.menu-hamburguer {
-    align-items: center;
+.menu-resp {
     display: none;
     margin-right: 50px;
-    position: relative;
+    padding: 30px;
+    height: 80px;
+}
+.menu-resp span {
+    border: 1px solid var(--amarelao);
+    width: 30px;
+}
+.menu-hamburguer{ 
+    display: none;
+    background-color: var(--amarelao);
+    list-style: none;
+   
+}
+.menu-hamburguer li{
+    border-bottom: 1px solid white;
+    text-align: center;
+    padding: 10px;
+}
+.menu-hamburguer li a{
+    text-decoration: none;
+    color: white;
+}
+.menu-resp:hover .menu-hamburguer {
+    padding: 30px;
+    position: absolute;
+    right: 60px;
+    top: 90px;
+    gap: 10px;
 }
 
-#menu-resp {
-    height: 50px;
-    width: 50px;
-}
 
 /* <-- end header --> */
 
@@ -152,7 +174,6 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-
     animation: carrossel 20s infinite;
     margin-left: 400vw;
 }
@@ -552,7 +573,7 @@ body {
 }
 
 #botoes-download {
-    width: 40vw;
+    width: 50vw;
     height: 50%;
     position: relative;
     top: 35%;
@@ -775,18 +796,18 @@ body {
 }
 
 .boxes-gym:hover .box-gym {
-  background-color: var(--pretoforte);
+    background-color: var(--pretoforte);
 }
 
-.boxes-gym:hover  {
+.boxes-gym:hover {
     background-color: var(--amarelao)
 }
 
-.boxes-gym:hover .info-box p  {
+.boxes-gym:hover .info-box p {
     color: white;
 }
 
-.boxes-gym:hover .info-box i  {
+.boxes-gym:hover .info-box i {
     color: white;
 }
 
@@ -799,6 +820,7 @@ body {
     position: relative;
     transition: 0.5s ease-in-out;
 }
+
 .g1 {
     height: 90%;
 }
@@ -835,7 +857,7 @@ body {
     text-emphasis: center;
 }
 
-.info-box i{
+.info-box i {
     font-size: 12vh;
 }
 
@@ -843,7 +865,8 @@ body {
 
 /* footer */
 .rodape {
-    background-color: gray;
+    background-color: black;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -853,17 +876,60 @@ body {
 
 /*reponsividade*/
 
+@media(max-width: 1350px) {
+    .pagamentos {
+        justify-content: center;
+    }
+
+    .pagamentos img {
+        display: none
+    }
+
+    #botoes-download {
+        left: 0;
+    }
+}
+
+@media(max-width: 1315px) {
+
+    #play-btn p,
+    #apple-btn p {
+        font-size: 3.5vh;
+    }
+}
+
 @media(max-width:1200px) {
     .navbar {
         display: none;
     }
-
-    .menu-hamburguer {
+    .menu-resp{
         display: flex;
+        flex-direction: column;
+        gap: 5px;
     }
+    .menu-resp:hover {
+        background-color: #FFDE17;
+        
+    }
+    .menu-resp:hover span{
+        border: 1px solid black;
+    }
+    .menu-resp:hover .menu-hamburguer {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
-    .menu-hamburguer:hover {
-        background-color: rgba(151, 148, 148, 0.397);
-        border-radius: 20px;
+@media(max-width:1110px) {
+    #botoes-download {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media(max-width:912px) {
+    #botoes-download {
+        margin-right: 50px;
     }
 }
