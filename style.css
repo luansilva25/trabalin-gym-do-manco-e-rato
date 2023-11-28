@@ -113,37 +113,33 @@ body {
 
 .menu-resp {
     display: none;
+    margin-right: 50px;
     padding: 30px;
     height: 80px;
 }
-
 .menu-resp span {
     border: 1px solid var(--amarelao);
     width: 30px;
 }
-
-.menu-hamburguer {
+.menu-hamburguer{ 
     display: none;
     background-color: var(--amarelao);
     list-style: none;
-
+   
 }
-
-.menu-hamburguer li {
+.menu-hamburguer li{
     border-bottom: 1px solid white;
     text-align: center;
     padding: 10px;
 }
-
-.menu-hamburguer li a {
+.menu-hamburguer li a{
     text-decoration: none;
     color: white;
 }
-
 .menu-resp:hover .menu-hamburguer {
     padding: 30px;
     position: absolute;
-    right: 1px;
+    right: 60px;
     top: 90px;
     gap: 10px;
 }
@@ -258,8 +254,6 @@ body {
 
 /* conteudo principal */
 .container-pagamentos {
-    display: flex;
-    flex-direction: column;
     font-family: var(--font);
     width: 100vw;
     height: 700px;
@@ -284,7 +278,6 @@ body {
 .pagamentos {
     display: flex;
     flex-direction: row-reverse;
-    flex-wrap: wrap;
     justify-content: space-between;
     border: 1px solid;
     height: 500px;
@@ -296,7 +289,6 @@ body {
 
 .matricula {
     display: flex;
-
     gap: 5px;
 }
 
@@ -440,13 +432,28 @@ body {
     position: relative;
     background-color: black;
     opacity: 90%;
+    align-items: center;
+    display: flex;
+}
+
+#desc-treino {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+    margin-bottom: 15vh;
+}
+
+#container-treinosFlex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #h2Treinos {
-    top: 8%;
-    left: 8%;
     font-size: 15vh;
-    position: absolute;
     color: white;
     font-family: var(--font);
 }
@@ -455,15 +462,10 @@ body {
     width: 30vw;
     height: 15vh;
     position: relative;
-    top: 40%;
-    left: 6%;
 }
 
 #treinosP1 {
-    top: 8%;
-    left: 8%;
     font-size: 3vh;
-    position: absolute;
     font-family: var(--font);
     color: var(--amarelao);
 }
@@ -472,16 +474,10 @@ body {
     width: 18vw;
     height: 9vh;
     position: relative;
-    top: 65%;
-    left: 8%;
     display: flex;
-    align-items: end;
-    position: absolute;
 }
 
 #treinosP2 {
-    top: 8%;
-    left: 8%;
     font-size: 3vh;
     font-family: var(--font);
     color: var(--amarelao);
@@ -504,8 +500,6 @@ body {
     height: 65vh;
     width: 35%;
     background-color: var(--amarelao);
-    position: relative;
-    left: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -560,12 +554,24 @@ body {
     font-family: var(--font);
 }
 
+#flex-app {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5vh;
+}
+
 #desc-app {
-    width: 21vw;
-    height: 50%;
-    position: relative;
-    top: 15%;
-    left: 4%;
+    width: 19vw;
+    height: 100%;
+    margin-left: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    justify-content: center;
+    gap: 1vh;
 }
 
 #desc-app h3 {
@@ -580,14 +586,19 @@ body {
     font-family: var(--font);
 }
 
+#botoes-flex {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
 #botoes-download {
-    width: 50vw;
-    height: 50%;
-    position: relative;
-    top: 35%;
-    left: 10%;
+    width: 45vw;
+    height: 80%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #play-btn {
@@ -695,6 +706,7 @@ body {
     background-color: var(--amarelao);
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #musica-section h2 {
@@ -705,13 +717,19 @@ body {
     font-family: var(--font);
 }
 
+#flex-musica {
+    height: 70%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
 #box-spotify {
     width: 30vw;
     height: 20vh;
-    position: relative;
-    top: 30%;
-    left: 6%;
     display: flex;
+    align-items: end;
 }
 
 #box-spotify h3 {
@@ -725,11 +743,9 @@ body {
 }
 
 #capa {
-    width: 25%;
-    height: 80%;
+    width: 28%;
+    height: 90%;
     position: relative;
-    bottom: 10%;
-    left: 67%;
 }
 
 #capa img {
@@ -910,29 +926,21 @@ body {
     .navbar {
         display: none;
     }
-
-    .menu-resp {
+    .menu-resp{
         display: flex;
         flex-direction: column;
         gap: 5px;
     }
-
     .menu-resp:hover {
         background-color: #FFDE17;
-
+        
     }
-
-    .menu-resp:hover span {
+    .menu-resp:hover span{
         border: 1px solid black;
     }
-
     .menu-resp:hover .menu-hamburguer {
         display: flex;
         flex-direction: column;
-    }
-
-    #logo {
-        width: 200px;
     }
 }
 
@@ -944,67 +952,8 @@ body {
     }
 }
 
-
 @media(max-width:912px) {
     #botoes-download {
         margin-right: 50px;
-    }
-
-}
-
-@media(max-width:750px) {
-    .menu-resp:hover .menu-hamburguer {
-        width: 100vw;
-    }
-
-    #search-bar {
-        align-self: center;
-        width: 600px;
-
-    }
-
-    .item-carrossel p {
-        font-size: 30px;
-    }
-
-    .item-carrossel {
-        height: 300px;
-    }
-
-    .item-carrossel img {
-        height: 300px
-    }
-
-    .container-pagamentos {
-        height: 150vh;
-        flex-wrap: wrap;
-    }
-    .container-pagamentos h1{
-        font-size: 20px;
-    }
-
-    .pagamentos {
-        height: 100vh;
-    }
-
-    .matricula {
-        height: auto;
-        flex-direction: column;
-    }
-}
-
-@media(max-width:640px) {
-    #search-bar {
-        width: 450px;
-    }
-}
-
-@media(max-width: 500px) {
-    #search-bar {
-        width: 300px
-    }
-
-    .item-carrossel p {
-        font-size: 20px;
     }
 }
