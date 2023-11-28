@@ -113,33 +113,37 @@ body {
 
 .menu-resp {
     display: none;
-    margin-right: 50px;
     padding: 30px;
     height: 80px;
 }
+
 .menu-resp span {
     border: 1px solid var(--amarelao);
     width: 30px;
 }
-.menu-hamburguer{ 
+
+.menu-hamburguer {
     display: none;
     background-color: var(--amarelao);
     list-style: none;
-   
+
 }
-.menu-hamburguer li{
+
+.menu-hamburguer li {
     border-bottom: 1px solid white;
     text-align: center;
     padding: 10px;
 }
-.menu-hamburguer li a{
+
+.menu-hamburguer li a {
     text-decoration: none;
     color: white;
 }
+
 .menu-resp:hover .menu-hamburguer {
     padding: 30px;
     position: absolute;
-    right: 60px;
+    right: 1px;
     top: 90px;
     gap: 10px;
 }
@@ -254,6 +258,8 @@ body {
 
 /* conteudo principal */
 .container-pagamentos {
+    display: flex;
+    flex-direction: column;
     font-family: var(--font);
     width: 100vw;
     height: 700px;
@@ -278,6 +284,7 @@ body {
 .pagamentos {
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
     justify-content: space-between;
     border: 1px solid;
     height: 500px;
@@ -289,6 +296,7 @@ body {
 
 .matricula {
     display: flex;
+
     gap: 5px;
 }
 
@@ -902,21 +910,29 @@ body {
     .navbar {
         display: none;
     }
-    .menu-resp{
+
+    .menu-resp {
         display: flex;
         flex-direction: column;
         gap: 5px;
     }
+
     .menu-resp:hover {
         background-color: #FFDE17;
-        
+
     }
-    .menu-resp:hover span{
+
+    .menu-resp:hover span {
         border: 1px solid black;
     }
+
     .menu-resp:hover .menu-hamburguer {
         display: flex;
         flex-direction: column;
+    }
+
+    #logo {
+        width: 200px;
     }
 }
 
@@ -928,8 +944,67 @@ body {
     }
 }
 
+
 @media(max-width:912px) {
     #botoes-download {
         margin-right: 50px;
+    }
+
+}
+
+@media(max-width:750px) {
+    .menu-resp:hover .menu-hamburguer {
+        width: 100vw;
+    }
+
+    #search-bar {
+        align-self: center;
+        width: 600px;
+
+    }
+
+    .item-carrossel p {
+        font-size: 30px;
+    }
+
+    .item-carrossel {
+        height: 300px;
+    }
+
+    .item-carrossel img {
+        height: 300px
+    }
+
+    .container-pagamentos {
+        height: 150vh;
+        flex-wrap: wrap;
+    }
+    .container-pagamentos h1{
+        font-size: 20px;
+    }
+
+    .pagamentos {
+        height: 100vh;
+    }
+
+    .matricula {
+        height: auto;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:640px) {
+    #search-bar {
+        width: 450px;
+    }
+}
+
+@media(max-width: 500px) {
+    #search-bar {
+        width: 300px
+    }
+
+    .item-carrossel p {
+        font-size: 20px;
     }
 }
