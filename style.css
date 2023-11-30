@@ -185,13 +185,16 @@ body {
 
 .item-carrossel {
     width: 100vw;
-    height: 500px;
+    height: 800px;
     background-image: linear-gradient(270deg, transparent, var(--pretofosco));
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
+.localizacao a {
+    color: black;
+}
 /* <-- carrossel animation --> */
 @keyframes carrossel {
     0% {
@@ -250,9 +253,13 @@ body {
 
 .item-carrossel img {
     width: 100vw;
-    height: 500px;
+    height: 800px;
     position: absolute;
     z-index: -1;
+}
+.street-view{
+    width: 100%;
+    height: 100vh;
 }
 
 /* end carrossel */
