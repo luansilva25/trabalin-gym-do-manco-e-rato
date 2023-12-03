@@ -1099,8 +1099,14 @@ body {
     }
 }
 @media(max-width:950px){
+    body{
+        overflow-x: hidden;
+    }
     #flex-app {
         margin-left: 100px;
+    }
+    #App-section h2{
+        margin-left: 70px;
     }
     #botoes-flex{
         margin-right: 100px;
@@ -1210,10 +1216,12 @@ body {
         width: 500px;
     }
     #flex-app{
-        margin: 50px;
+        margin: 70px;
     }
     #App-section h2{
         font-size: 5vh;
+        margin-left: 20px;
+        
      }
      #musica-section{
         gap: 20px;
