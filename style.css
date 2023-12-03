@@ -1094,6 +1094,9 @@ body {
     #beneficios-treino{
         width: 350px;
     }
+    .container-rodape{
+        flex-direction: column;
+    }
 }
 @media(max-width:950px){
     #flex-app {
