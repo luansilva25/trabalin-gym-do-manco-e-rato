@@ -21,13 +21,15 @@
         <!-- menu de navegação -->
         <nav class="navbar">
             <input type="search" name="" id="search-bar" placeholder="pesquise algo aqui...">
+            <ul id="lista-nav">
             <li><a href="#">home</a></li>
             <li><a href="#">treinos</a></li>
             <li><a href="#">noticias</a></li>
             <li><a href="#">galeria</a></li>
             <li><a href="#">sobre</a></li>
+        </ul>
             <div class="registro">
-                <button><a href="login">login</a></button>
+                <button>login</button>
             </div>
         </nav>
         <div class="menu-resp">
@@ -36,11 +38,13 @@
             <span></span>
             <div class="menu-hamburguer">
                 <input type="search" name="" id="search-bar" placeholder="pesquise algo aqui...">
+                <ul id="lista-navResponsiva">
                 <li><a href="#">home</a></li>
                 <li><a href="#">treinos</a></li>
                 <li><a href="#">noticias</a></li>
                 <li><a href="#">galeria</a></li>
                 <li><a href="#">sobre</a></li>
+            </ul>
             </div>
         </div>
         <!--fim do menu de navegação-->
@@ -49,6 +53,7 @@
     <!-- conteudo principal-->
     <main class="container">
         <!--carrossel-->
+        <!-- <div class="container-carrossel"> -->
         <div class="carrossel">
             <div class="item-carrossel">
                 <img src="img/academia.jpg" alt="academia">
@@ -78,13 +83,12 @@
             <input type="radio" name="" id="">
             <input type="radio" name="" id="">
         </div>
+    <!-- </div> -->
         <!--localização-->
         <div class="localizacao">
             <p>Uplay</p>
             <a target="_blank" href="https://maps.app.goo.gl/38HzicCmxnFYX4oJA"><i
                     class="fa-solid fa-location-dot"></i></a>
-
-
         </div>
         <div class="street-view">
             <iframe
@@ -123,7 +127,7 @@
                             <li>sem desculpas</li>
                         </ul>
                         <div class="botao-anual">
-                            <button>quero me matricular</button>
+                            <button onclick="algumaJS()">quero me matricular</button>
                         </div>
                     </div>
                 </div>
@@ -285,18 +289,29 @@
                 </div>
             </div>
             <div class="notificacoes">
-                <p>receba nossas notificações</p>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>receba nossas notificações</legend>
+                  
+
                 <div class="email">
-                    <p>email</p>
-                    <input type="email" name="" id="" placeholder="E-mail">
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    
+
+                    <label><input type="checkbox" name="notificacao" id="notificacao">Desejo receber notificações</label>
                     <button>enviar</button>
-                </div>
+                </div>  
+            </fieldset>
+            </form>
             </div>
         </div>
 
     </footer>
     <!--fim do rodapé-->
     <!--NOIS MANCO-->
+    <script src="js.js"></script>
 </body>
 
 </html>
