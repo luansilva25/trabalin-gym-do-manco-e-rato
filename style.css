@@ -62,7 +62,7 @@ body {
     transition: .5s;
 }
 
-#search-bar {
+.search-bar {
     height: 40px;
     width: 300px;
     font-size: 15px;
@@ -72,8 +72,8 @@ body {
     padding-left: 10px;
 }
 
-#search-bar:focus,
-#search-bar:hover {
+.search-bar:focus,
+.search-bar:hover {
     border: 1px solid yellow
 }
 
@@ -295,23 +295,6 @@ html, body, main {
     height: 700px;
     position: absolute;
     z-index: -2;
-}
-.navigation-carrossel{
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    background-color: var(--pretofosco);
-    width: 100vw;
-}
-.navigation-carrossel input{
-    height: 30px;
-    width: 30px;
-    outline: 0;
-}
-.navigation-carrossel input:hover{
-    outline: var(--amarelao);
 }
 .street-view{
     width: 100%;
